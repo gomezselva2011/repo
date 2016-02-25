@@ -1,10 +1,3 @@
-
-import urllib
-f = urllib.urlopen("http://nuevaya.com.ni")
-s = f.read()
-f.close()
-
-from bs4 import BeautifulSoup
-soup = BeautifulSoup(s, 'html.parser')
-for article in soup.find_all('article'):
-    print(article.get('id'))
+string = str([u'post-274151'])
+stringing =string.split('-')[1]
+print int(stringing[0:len(stringing)-2])
